@@ -1,2 +1,0 @@
-# Turkigoliburan
-GitHub Pages
