@@ -1,0 +1,1068 @@
+{
+  "settings": {
+    "currentPage": "index.html",
+    "theme": {
+      "name": "artm4",
+      "title": "ArtM4",
+      "styling": {
+        "primaryColor": "#ffb18a",
+        "secondaryColor": "#2bdc9d",
+        "successColor": "#1dc9cb",
+        "infoColor": "#ff8a8a",
+        "warningColor": "#C1C1C1",
+        "dangerColor": "#444444",
+        "mainFont": "Montserrat",
+        "display1Font": "Montserrat",
+        "display1Size": 3,
+        "display2Font": "Montserrat",
+        "display2Size": 1.8,
+        "display5Font": "Montserrat",
+        "display5Size": 1.2,
+        "display7Font": "Montserrat",
+        "display7Size": 1,
+        "display4Font": "Montserrat",
+        "display4Size": 1,
+        "isRoundedButtons": true,
+        "isGhostButtonBorder": false,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": false
+      },
+      "titlePreset": "Travel Agency",
+      "nameSelectPreset": "travel-agency",
+      "presetSourceTheme": "businessm4",
+      "additionalSetColors": [
+        "#2bdc9d"
+      ]
+    },
+    "path": "@PROJECT_PATH@",
+    "name": "turkigoliburan",
+    "versionFirst": "5.3.0",
+    "siteFonts": [
+      {
+        "css": "'Montserrat', sans-serif",
+        "name": "Montserrat",
+        "url": "https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      }
+    ],
+    "imageResize": true,
+    "chatbutton": {
+      "phone": "+6288279135000",
+      "message": "",
+      "size": "65px",
+      "backgroundColor": "#e5ddd5",
+      "position": "left",
+      "popupMessage": "Hi\n\nSaya tertarik dengan paket liburan turki",
+      "showPopup": true,
+      "showOnIE": true,
+      "autoOpenTimeout": "0",
+      "headerColor": "#39847a",
+      "headerTitle": "Turkigoliburan.id",
+      "placeholder": "Type here",
+      "zIndex": 10,
+      "enabled": true
+    },
+    "favicon": "@PROJECT_PATH@/assets/images/whatsapp-image-2021-03-19-at-16.13.22-128x128.png",
+    "mbrsiteDomain": "yb4drtaoin",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "publishChangesOnly": true,
+    "uniqCompNum": 47,
+    "versionPublish": "5.3.0",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Turkigoliburan",
+        "meta_descr": "Tour terpercaya untuk melihat indahnya kota turki",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background": "linear-gradient(90deg, @bg-value, @bgColor2)"
+            },
+            ".mbr-overlay": {
+              "background": "@overlayColor",
+              "& when (@gradientOverlay)": {
+                "background": "linear-gradient(90deg, @overlayColor, @overlayColor2)"
+              }
+            },
+            ".mbr-section-subtitle": {
+              "color": "#e3e3e3"
+            },
+            ".mbr-section-subtitle,mbr-section-btn": {
+              "color": "#ffffff"
+            },
+            "B": {
+              "color": "#333333"
+            },
+            "H1": {
+              "color": "#444444"
+            }
+          },
+          "_name": "header6",
+          "_customHTML": "<section class=\"header6\" group=\"Headers\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n         'mbr-fullscreen': fullScreen,\n         'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Arrow\" name=\"showArrow\" checked>\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/wallpapertip-hd-wallpaper-collection-2281542-1920x1080.jpg\" selected parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#2bdc9d\">\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=kI1YE_qenSU\">\n        </fieldset>\n        <input type=\"color\" name=\"bgColor2\" title=\"Color 2\" value=\"#1dc9cb\" condition=\"bg.type=='color'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#444444\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"checkbox\" title=\"Gradient Overlay\" name=\"gradientOverlay\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"overlayColor2\" value=\"#1dc9cb\" condition=\"overlay && bg.type !== 'color'&&gradientOverlay\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.2\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" mbr-style=\"{'opacity': overlayOpacity}\">\n    </div>\n\n    <div class=\"container align-left\">\n        <div class=\"row justify-content-center\">\n            <div class=\"media-container-column mbr-white col-md-10\">\n                <h1 class=\"mbr-section-title align-center pb-3 mbr-fonts-style\" mbr-theme-style=\"display-1\" mbr-if=\"showTitle\"><b>Bertualang Bersama Kami</b></h1>\n                <h3 class=\"mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle,mbr-section-btn\">Explore turki melalui sudut pandang berbeda</h3>\n                <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn align-center pt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a class=\"btn btn-md btn-primary\" href=\"index.html#features3-j\" data-app-placeholder=\"Type Text\">Jadwal Kami</a></div>\n            </div>\n        </div>\n    </div>\n    <div mbr-if=\"showArrow && fullScreen\" class=\"mbr-arrow hidden-sm-down\" aria-hidden=\"true\">\n        <a href=\"#next\">\n            <i class=\"mbri-down mbr-iconfont\"></i>\n        </a>\n    </div>\n</section>",
+          "_cid": "qKSDBfAnnY",
+          "_anchor": "header6-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-img": {
+              "span": {
+                "color": "@iconColor",
+                "font-size": "~\"@{icon1}rem\""
+              }
+            },
+            ".mbr-text": {
+              "color": "#656565"
+            },
+            "p": {
+              "margin": "0"
+            },
+            "@media (max-width: 576px)": {
+              ".card": {
+                "margin-bottom": "2rem"
+              }
+            },
+            ".card-title, .card-img": {
+              "color": "#000000"
+            },
+            ".mbr-section-title": {
+              "text-align": "center"
+            },
+            ".mbr-section-sub-title": {
+              "text-align": "center",
+              "color": "#9e9e9e"
+            }
+          },
+          "_name": "features2",
+          "_sourceTheme": "travelm4",
+          "_customHTML": "<section class=\"features2 travelm4_features2\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Main Title\" name=\"showMaintitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Main Subtitle\" name=\"showMainsubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n\t\t<header>Icon</header>\n\t\t<input type=\"checkbox\" title=\"Show\" name=\"showIcon\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"iconColor\" value=\"#ffb18a\" condition=\"showIcon\">\n\t\t<input type=\"range\" inline title=\"Size\" name=\"icon1\" min=\"1\" max=\"10\" step=\"0.1\" value=\"3.5\" condition=\"showIcon\">\n\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" value=\"../_images/background1.jpg\" title=\"Image\">\n\t\t\t<input type=\"color\" value=\"#ffffff\" title=\"Color\" selected>\n\t\t\t<input type=\"video\" value=\"https://www.youtube.com/watch?v=JPe2mwq96cw\" title=\"Video\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container\">\n\t\t<h2 class=\"mbr-section-title pb-2 mbr-bold mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showMaintitle\" data-app-selector=\".mbr-section-title\">\n\t\t\tKenapa <span style=\"font-weight: normal;\">harus memilih kami</span></h2>\n\n\t\t<h3 class=\"mbr-section-sub-title pb-4 mbr-normal mbr-fonts-style align-left\" mbr-theme-style=\"display-4\" mbr-if=\"showMainsubtitle\" data-app-selector=\".mbr-section-sub-title\">\n\t\t\tKami menawarkan berbagai kelebihan</h3>\n\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"card p-3 col-12 col-md-6 border-r\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-img pb-3\" mbr-if=\"showIcon\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mdi-action-thumb-up\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"count card-title mbr-fonts-style mbr-white mbr-bold align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\tTerpercaya</h4>\n\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-white mbr-normal align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t\tKami bekerjasama dengan <b>PT WISATAPRENEUR</b> DARING INDONESIA, yang telah terbukti terpercaya dalam melayani keluarga Indonesia  menikmati destinasi liburan terbaik, via transaksi daring\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6 border-r\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-img pb-3\" mbr-if=\"showIcon\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont fa-dollar fa\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"count card-title mbr-fonts-style mbr-white mbr-bold align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\tHemat</h4>\n\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-white mbr-normal align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t\tSebagai portal online penjualan paket tour, kami menjanjikan <b>harga terbaik</b> untuk anda. Hemat uang anda dengan membeli paket tour online yang bisa anda booking dimanapun anda berada\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6 border-r\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-img pb-3\" mbr-if=\"showIcon\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont fa-group fa\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"count card-title mbr-fonts-style mbr-white mbr-bold align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\tKualitas Terjaga</h4>\n\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-white mbr-normal align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t\tHarga yang hemat bukan berarti mengurangi <b>kualitas</b>. Banyaknya jumlah peserta adalah bukti keberhasilan kami dalam mendapatkan kepuasan pelanggan.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-img pb-3\" mbr-if=\"showIcon\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-users\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"count card-title mbr-fonts-style mbr-white mbr-bold align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-img\">\n\t\t\t\t\t\tHappy Clients\n\t\t\t\t\t</h4>\n\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-white mbr-normal align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">\n\t\t\t\t\t\tLorem ipsum dolor sit amet, consect adipiscing elit.\n\t\t\t\t\t</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "ssBHtP0Gwh",
+          "_anchor": "features2-f",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card": {
+              "padding": "1rem 1rem 3rem 1rem"
+            },
+            ".card-img": {
+              "padding-bottom": "2rem",
+              "border-radius": ".25rem",
+              "overflow": "hidden",
+              "img": {
+                "border-radius": ".25rem",
+                "box-shadow": "0px 0px 30px rgba(115, 128, 157, 0.3)",
+                "-webkit-box-shadow": "0px 0px 30px rgba(115, 128, 157, 0.3)"
+              }
+            },
+            ".section-text,.card-text": {
+              "color": "#8d97ad"
+            },
+            "@media (max-width: 767px)": {
+              ".section-text,.card-text, .card-title,.mbr-section-title": {
+                "text-align": "center"
+              }
+            },
+            ".section-text": {
+              "color": "#353535"
+            },
+            ".card-text,.mbr-section-btn": {
+              "color": "#353535"
+            }
+          },
+          "_name": "features9",
+          "_customHTML": "<section class=\"features9\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\"> \n        \n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Show Section Buttons\" name=\"showSectionButtons\" checked>\n\n        <input type=\"checkbox\" title=\"Show Сards Title\" name=\"showContentTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <select title=\"Columns\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\" selected>3</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/businessm4/components/_images/background6.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://youtu.be/iM-NestDPNQ\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#f4f8fa\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"card col-12\" mbr-class=\"{'col-md-6':cardsAmount<3,\n                             'col-md-4':cardsAmount>2}\">\n                <h2 class=\"mbr-fonts-style mb-4 mbr-section-title\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\"><b>Keunggulan </b>Kami</h2>\n                <h3 class=\"mbr-text section-text mbr-fonts-style mbr-light\" mbr-theme-style=\"display-7\" mbr-if=\"showSubtitle\" data-app-selector=\".section-text\">kami mampu menyediakan jadwal bulanan untuk tour-tour menuju <b>destinasi favorit</b>. Jika anda ingin traveling, namun kesulitan mengumpulkan teman-teman, bergabunglah bersama kami tanpa perlu memusingkan kuota minimal keberangkatan.</h3>\n                <div class=\"mbr-section-btn pt-2\" mbr-if=\"showSectionButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-secondary\" href=\"https://wa.link/qv8rmd\" data-app-placeholder=\"Type Text\" target=\"_blank\"><span class=\"socicon socicon-whatsapp mbr-iconfont mbr-iconfont-btn\"></span>Konsultasi</a></div>\n            </div>\n            <div class=\"card col-12\" mbr-class=\"{'col-md-6':cardsAmount<3,\n                             'col-md-4':cardsAmount>2}\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-img\">\n                    <img src=\"@PROJECT_PATH@/assets/images/tak-usah-ragu-ini-5-keuntungan-jalan-jalan-menggunakan-jasa-tour-guide-5pbgzsviqn-653x474.jpg\" alt=\"Mobirise\" title>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title, .card-img\">\n                        Travel by air</h4>\n                    <p class=\"mbr-text card-text mbr-fonts-style mbr-light\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text,.mbr-section-btn\">\n                        Kami juga menyediakan <b>Guide profesional</b> untuk memandu perjalanan selama mengelilingi turki</p>\n                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn-underline mr-3 text-success\" href=\"index.html\">Read More</a></div>\n                </div>\n            </div>\n            <div class=\"card col-12\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-md-6':cardsAmount<3,\n                             'col-md-4':cardsAmount>2}\">\n                <div class=\"card-img\">\n                    <img src=\"@PROJECT_PATH@/assets/images/hotel-room-wallpaper-653x490.jpg\" alt=\"Mobirise\" title>\n                </div>\n                <div class=\"card-box\">\n                    <h4 class=\"card-title mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showContentTitle\" data-app-selector=\".card-title, .card-img\">Travel by train</h4>\n                    <p class=\"mbr-text card-text mbr-fonts-style mbr-light\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-text,.mbr-section-btn\">\n                        Dan fasilitas hotel berbintang untuk <b>mengobati rasa lelah</b> setelah menikmani indahnya turki</p>\n                    <div class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn-underline mr-3 text-success\" href=\"index.html\">Read More</a></div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "qKSHY8QRbm",
+          "_anchor": "features9-8",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-title": {
+              "line-height": "1.6",
+              "margin": "0"
+            },
+            ".card": {
+              "overflow": "visible",
+              "transition": "all 0.3s",
+              "&:hover": {
+                "margin-top": "-0.6rem"
+              }
+            },
+            ".card-wrapper": {
+              "position": "relative"
+            },
+            ".card-img": {
+              "overflow": "hidden",
+              "position": "relative",
+              "transition": "all 0.3s",
+              "border-radius": "6px",
+              "&:hover": {
+                "box-shadow": "0 15px 20px rgba(0, 0, 0, 0.1)"
+              }
+            },
+            ".card-img:before": {
+              "content": "''",
+              "display": "block",
+              "position": "absolute",
+              "top": "0",
+              "left": "0",
+              "height": "100%",
+              "width": "100%",
+              "transition": "all 0.3s",
+              "background": "black",
+              "opacity": "0.2",
+              "z-index": "10",
+              "pointer-events": "none",
+              "border-radius": "6px"
+            },
+            ".big": {
+              "margin-top": "-25%"
+            },
+            ".card-box": {
+              "position": "absolute",
+              "overflow": "hidden",
+              "margin-bottom": "-8px",
+              "bottom": "0",
+              "left": "0",
+              "width": "100%",
+              "padding": "1rem",
+              "z-index": "100",
+              "-webkit-justify-content": "flex-end",
+              "justify-content": "flex-end",
+              "display": "flex",
+              "-webkit-flex-direction": "column",
+              "flex-direction": "column"
+            },
+            "@media (max-width: 991px)": {
+              ".small": {
+                "margin": "0"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".card:not(.last-child)": {
+                "padding-bottom": "1.5rem !important"
+              }
+            },
+            ".mbr-section-title": {
+              "color": "#ffffff"
+            },
+            ".mbr-section-sub-title": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "features1",
+          "_sourceTheme": "travelm4",
+          "_customHTML": "<section class=\"features1 travelm4_features1\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"3\">\n\t\t<select title=\"Rows\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\" selected>2</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Main Title\" name=\"showMaintitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Main Subtitle\" name=\"showMainsubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Card Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Card Text\" name=\"showText\" checked>\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" value=\"@PROJECT_PATH@/assets/images/wallpapertip-hd-wallpaper-collection-2281542-1920x1080.jpg\" title=\"Image\" selected parallax>\n\t\t\t<input type=\"color\" value=\"#ffffff\" title=\"Color\">\n\t\t\t<input type=\"video\" value=\"https://www.youtube.com/watch?v=JPe2mwq96cw\" title=\"Video\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#656565\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container\">\n\t\t<h2 class=\"mbr-section-title pb-2 mbr-bold mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showMaintitle\" data-app-selector=\".mbr-section-title\"><span style=\"font-weight: normal;\">\n\t\t\tDestinasi</span> populer <span style=\"font-weight: normal;\">di Turki</span></h2>\n\n\t\t<h3 class=\"mbr-section-sub-title pb-4 mbr-normal mbr-fonts-style align-center\" mbr-theme-style=\"display-4\" mbr-if=\"showMainsubtitle\" data-app-selector=\".mbr-section-sub-title\">\n\t\t\tBanyak kota kota indah nan bersejarah di turki diantaranya seperti beberapa kota berikut ini</h3>\n\n\t\t<div class=\"row row-content justify-content-center\">\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6 pb-md-4\" mbr-if=\"cardsAmount > 0\" mbr-class=\"{'pb-lg-5': cardsAmount == 2, 'pb-lg-0': cardsAmount == 1}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/istanbul-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tIstanbul</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tKota dengan arsitektur dari kekaisaran Bizantium dan Ottoman</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6 pb-md-4\" mbr-if=\"cardsAmount > 0\" mbr-class=\"{'pb-lg-5': cardsAmount == 2, 'pb-lg-0': cardsAmount == 1}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/cappadocia-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tCappadocia</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tWilayah di turki dengan formasi batu nan indah dan gua</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cardsAmount > 0\" mbr-class=\"{'pb-md-4 pb-lg-5': cardsAmount == 2}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/kusadasi-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tKusadasi</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tKota resort dengan pantai aegea dan reruntuhan kuno</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cardsAmount > 0\" mbr-class=\"{'last-child': cardsAmount == 1, 'pb-md-4 pb-lg-5': cardsAmount == 2}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/pamukale-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tPamukkale</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tAir panas alami di teras travertine dan reruntuhan Hierapolis kuno</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6 pb-md-4 pb-lg-0\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/bursa-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tBursa</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tKota dengan banyak situs sejarah dari awal kekaisaran Utsmani</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6 pb-md-4 pb-lg-0\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/konya-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tKonya</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tTerkenal dengan museum Mevlana dengan makam Rumi</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cardsAmount > 1\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/ankara-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tAnkara</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">\n\t\t\t\t\t\t\tIbu kota Turki dengan koleksi arkeologi kenamaan</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-lg-3 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'last-child': cardsAmount == 2}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img small\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/bolu-490x551.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tBolu</h4>\n\t\t\t\t\t\t<h5 class=\"card-sub-title mbr-fonts-style mbr-white mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-sub-title\"><span style=\"font-weight: normal;\">Kota di barat laut hitam dan terkenal dengan pemandangan hijaunya&nbsp;</span></h5>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "ssBCIFvSwJ",
+          "_anchor": "features1-b",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-wrapper": {
+              "overflow": "hidden",
+              "height": "100%",
+              "background": "@cardColor",
+              "color": "#444444",
+              "padding": "0",
+              "border-radius": "6px",
+              "border": "1px solid @borderColor",
+              "transition": "all 0.3s",
+              "&:hover": {
+                "box-shadow": "0 20px 30px rgba(0, 0, 0, 0.1)",
+                "margin-top": "-0.6rem"
+              }
+            },
+            "p": {
+              "line-height": "1.6"
+            },
+            ".btn": {
+              "border": "none",
+              "background": "transparent",
+              "font-weight": "400 !important"
+            },
+            ".card-title": {
+              "color": "#000000",
+              "margin": "0",
+              "line-height": "1.3",
+              "padding-bottom": "1.5rem"
+            },
+            ".card-img": {
+              "overflow": "hidden",
+              "max-height": "280px",
+              "border-radius": "0"
+            },
+            "img": {
+              "transition": "all 0.3s"
+            },
+            ".card-box": {
+              "padding": "1.5rem"
+            },
+            ".mbr-section-title": {
+              "margin": "0 auto",
+              "color": "#000000",
+              "text-align": "center"
+            },
+            ".card-box > p, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".mbr-section-sub-title": {
+              "text-align": "center",
+              "color": "#353535"
+            }
+          },
+          "_name": "features3",
+          "_sourceTheme": "travelm4",
+          "_customHTML": "<section class=\"features3 travelm4_features3\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"4\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Main Title\" name=\"showMaintitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Main Subtitle\" name=\"showMainsubtitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Cards Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Cards Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showbuttons\" checked>\n\t\t<header>Colors</header>\n\t\t<input type=\"color\" title=\"Cards\" name=\"cardColor\" value=\"#ffffff\">\n\t\t<input type=\"color\" title=\"Border\" name=\"borderColor\" value=\"#ececec\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" value=\"../_images/background1.jpg\" title=\"Image\">\n\t\t\t<input type=\"color\" value=\"#ffffff\" title=\"Color\" selected>\n\t\t\t<input type=\"video\" value=\"https://www.youtube.com/watch?v=JPe2mwq96cw\" title=\"Video\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#656565\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h2 class=\"mbr-section-title pb-2 mbr-bold mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showMaintitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tPerjalanan <span style=\"font-weight: normal;\">Kami</span></h2>\n\n\t\t\t\t<h3 class=\"mbr-section-sub-title pb-4 mbr-normal mbr-fonts-style align-left\" mbr-theme-style=\"display-7\" mbr-if=\"showMainsubtitle\" data-app-selector=\".mbr-section-sub-title\">Kami pilih <b>jadwal terbaik</b> untuk kebrangkatan anda, lengkap dengan Tiket grup dari <b>maskapai ternama</b>.<br>Anda bebas berangkat tanpa menunggu kuota minimum\n</h3>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row row-content justify-content-center\">\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/test-3-670x560.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tSpring in Turkey 2021</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">Nikmati indahnya kota kota di turki selama <b>10 hari</b> dengan fasilitas yang lengkap dan Guide Profesional</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-sm btn-primary\" data-app-placeholder=\"Type Text\" target=\"_blank\">CHOOSE PLAN</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/test-670x560.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tRamadhan &amp; IED in Turkey</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n\t\t\t\t\t\t\tRasakan pengalaman berbeda dengan liburan sambil melaksanakan&nbsp;<b>Tarawih</b> &amp; <b>Sholat IED</b> di Mesjid2 Bersejarah&nbsp;</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-sm btn-primary\" data-app-placeholder=\"Type Text\" target=\"_blank\">CHOOSE PLAN</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/test-4-670x560.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tLebaran in Turkey 2021</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n\t\t\t\t\t\t\tHiasi<b> libur lebaran</b> dengan mengelilingi indahnya kota kota di turki dengan segala sejarahnya</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-sm btn-primary\" data-app-placeholder=\"Type Text\" target=\"_blank\">CHOOSE PLAN</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "ssBZzBgPEZ",
+          "_anchor": "features3-j",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".card-wrapper": {
+              "overflow": "hidden",
+              "height": "100%",
+              "background": "@cardColor",
+              "color": "#444444",
+              "padding": "0",
+              "border-radius": "6px",
+              "border": "1px solid @borderColor",
+              "transition": "all 0.3s",
+              "&:hover": {
+                "box-shadow": "0 20px 30px rgba(0, 0, 0, 0.1)",
+                "margin-top": "-0.6rem"
+              }
+            },
+            "p": {
+              "line-height": "1.6"
+            },
+            ".btn": {
+              "border": "none",
+              "background": "transparent",
+              "font-weight": "400 !important"
+            },
+            ".card-title": {
+              "color": "#000000",
+              "margin": "0",
+              "line-height": "1.3",
+              "padding-bottom": "1.5rem"
+            },
+            ".card-img": {
+              "overflow": "hidden",
+              "max-height": "280px",
+              "border-radius": "0"
+            },
+            "img": {
+              "transition": "all 0.3s"
+            },
+            ".card-box": {
+              "padding": "1.5rem"
+            },
+            ".mbr-section-title": {
+              "margin": "0 auto",
+              "color": "#000000",
+              "text-align": "center"
+            },
+            ".card-box > p, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".mbr-section-sub-title": {
+              "text-align": "center",
+              "color": "#9e9e9e"
+            }
+          },
+          "_name": "features3",
+          "_sourceTheme": "travelm4",
+          "_customHTML": "<section class=\"features3 travelm4_features3\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t</select>\n\t\t<header>Show/Hide</header>\n\t\t<input type=\"checkbox\" title=\"Main Title\" name=\"showMaintitle\">\n\t\t<input type=\"checkbox\" title=\"Main Subtitle\" name=\"showMainsubtitle\">\n\t\t<input type=\"checkbox\" title=\"Cards Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Cards Text\" name=\"showText\" checked>\n\t\t<input type=\"checkbox\" title=\"Buttons\" name=\"showbuttons\" checked>\n\t\t<header>Colors</header>\n\t\t<input type=\"color\" title=\"Cards\" name=\"cardColor\" value=\"#ffffff\">\n\t\t<input type=\"color\" title=\"Border\" name=\"borderColor\" value=\"#ececec\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" value=\"../_images/background1.jpg\" title=\"Image\">\n\t\t\t<input type=\"color\" value=\"#ffffff\" title=\"Color\" selected>\n\t\t\t<input type=\"video\" value=\"https://www.youtube.com/watch?v=JPe2mwq96cw\" title=\"Video\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Color\" name=\"overlayColor\" value=\"#656565\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<h2 class=\"mbr-section-title pb-2 mbr-bold mbr-fonts-style align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showMaintitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tArticles &amp; Tips\n\t\t\t\t</h2>\n\n\t\t\t\t<h3 class=\"mbr-section-sub-title pb-4 mbr-normal mbr-fonts-style align-left\" mbr-theme-style=\"display-4\" mbr-if=\"showMainsubtitle\" data-app-selector=\".mbr-section-sub-title\">\n\t\t\t\t\tLorem ipsum dolor sit amet, consectetur elit\n\t\t\t\t</h3>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"row row-content justify-content-center\">\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/test-2-670x560.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tSummer Holiday in Turkey</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n\t\t\t\t\t\t\tRasakan kehangatan musim panas&nbsp; dengan mengunjugin berbagai tempat <b>bersejaran</b> di turki</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-sm btn-primary\" data-app-placeholder=\"Type Text\" target=\"_blank\">CHOOSE PLAN</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/test-5-670x560.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tAutum in Turkey</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n\t\t\t\t\t\t\tGugurnya dedaunan di musim gugur akan <b>memperindah</b> suasana di kota turki</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-sm btn-primary\" data-app-placeholder=\"Type Text\" target=\"_blank\">CHOOSE PLAN</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-4': cardsAmount == '3'|| cardsAmount =='5'|| cardsAmount== '6'}\">\n\t\t\t\t<div class=\"card-wrapper\">\n\t\t\t\t\t<div class=\"card-img\">\n\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/cappadocia-670x754.png\" title alt>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t\t<h4 class=\"card-title mbr-fonts-style mbr-bold\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n\t\t\t\t\t\t\tNantikan Trip Berikutnya</h4>\n\t\t\t\t\t\t<p class=\"mbr-text mbr-fonts-style mbr-normal\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".card-box > p, .mbr-section-btn\">\n\t\t\t\t\t\t\tTidak sabar menunggu jadwal trip kami berikutnya ?<br>Pantau sosial media kami</p>\n\t\t\t\t\t\t<div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn\" mbr-if=\"showbuttons\" data-toolbar=\"-mbrBtnMove\"><a href=\"https://www.instagram.com/turkigoliburan.id/\" class=\"btn btn-sm btn-info\" data-app-placeholder=\"Type Text\" target=\"_blank\">Instagram</a></div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "ssC6IvK5SQ",
+          "_anchor": "features3-o",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "features05",
+          "_customHTML": "<section class=\"features5\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"mobirise-icons2\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showsubTitle\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked>\n        <input type=\"color\" title=\"Card Color\" name=\"cardColor\" value=\"#fafafa\" condition=\"showLink\" selected>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/curem4/components/_images/background3.jpg\" parallax>\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"row\">\n            <div class=\"col-12 col-lg-6\" mbr-if=\"cardsAmount > 0\">\n                <div class=\"card-wrapper\">\n                    <div class=\"text-wrapper\">\n                        <div class=\"content\">\n                            <h6 class=\"card1-subtitle mbr-fonts-style mb-2\" mbr-theme-style=\"display-7\" mbr-if=\"showsubTitle\" data-app-selector=\".card1-subtitle\"><b>Punya Grup &amp; Itinerary Sendiri?</b></h6>\n                            <h5 class=\"card1-title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card1-title\">Untuk grup <b>minimal</b> Lima orang, kami akan bantu anda mendapatkan <b>harga terbaik</b> untuk liburan anda</h5>\n                        </div>\n                        <div mbr-buttons mbr-theme-style=\"display-4\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\"><a href=\"http://wa.link/748mbz\" class=\"btn btn-md btn-secondary\" data-app-placeholder=\"Type Text\" target=\"_blank\">Submit Custom Tour</a></div>\n                    </div>\n                    <div class=\"img-wrapper\">\n                        <img src=\"@PROJECT_PATH@/assets/images/grup-800x900.png\" alt=\"Mobirise\" title>\n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".row": {
+              "justify-content": "center",
+              ".row": {
+                "@media (max-width: 767px)": {
+                  "flex-direction": "column-reverse",
+                  ".img-wrapper": {
+                    "margin-bottom": "2rem"
+                  }
+                }
+              }
+            },
+            ".text-wrapper": {
+              "width": "70%",
+              "z-index": "2",
+              "position": "relative",
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "space-between",
+              "height": "100%"
+            },
+            ".card1-subtitle": {
+              "width": "fit-content",
+              "background": "@successColor",
+              "border-radius": "16px",
+              "padding": "0 1rem",
+              "color": "#ffffff"
+            },
+            ".col-lg-4": {
+              "height": "auto"
+            },
+            ".col-12": {
+              "@media (max-width: 992px)": {
+                "margin-bottom": "2rem"
+              }
+            },
+            ".card-wrapper": {
+              "position": "relative",
+              "height": "100%",
+              "z-index": "2",
+              "padding": "2rem",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1rem"
+              },
+              "&:hover": {
+                "img": {
+                  "transform": "scale(1.1)"
+                }
+              },
+              ".img-wrapper": {
+                "position": "absolute",
+                "top": "0",
+                "left": "0",
+                "height": "100%",
+                "width": "100%",
+                "z-index": "1"
+              }
+            },
+            ".img-wrapper img": {
+              "transition": "all 0.6s",
+              "height": "100%",
+              "object-fit": "cover"
+            },
+            ".card-subtitle": {
+              "color": "#ffffff"
+            },
+            ".mbr-text": {
+              "color": "#555555"
+            },
+            ".card2-title": {
+              "color": "#353535"
+            },
+            ".card1-title": {
+              "color": "#103178"
+            },
+            ".card2-subtitle": {
+              "color": "#ffb18a"
+            },
+            ".card3-subtitle": {
+              "color": "#ffffff"
+            },
+            ".card3-title": {
+              "color": "#ffc800"
+            },
+            ".card3-price": {
+              "color": "#bbbbbb",
+              "text-decoration": "line-through"
+            }
+          },
+          "_cid": "ssChE816z0",
+          "_anchor": "features05-s",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "clients",
+          "_customHTML": "<section class=\"clients clients1 industrym4_clients1\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"BootstrapCarouselSwipe,mbr-clients-slider\" data-interval=\"false\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"6\">\n\t\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\">\n\t\t<input type=\"range\" inline title=\"Items\" name=\"slidesCount\" min=\"1\" max=\"20\" step=\"1\" value=\"6\">\n\t\t<select title=\"Visible Slides\" name=\"visibleSlides\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\" selected>3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t\t<option value=\"5\">5</option>\n\t\t\t<option value=\"6\">6</option>\n\t\t</select>\n\t\t<input type=\"checkbox\" title=\"Autoplay\" name=\"showAutoplay\" checked>\n\t\t<input type=\"range\" inline title=\"Autoplay Interval (ms)\" name=\"interval\" min=\"1000\" max=\"8000\" step=\"1000\" value=\"4000\" condition=\"showAutoplay\">\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/wallpapertip-hd-wallpaper-collection-2281542-1920x1080.jpg\" parallax selected>\n\t\t\t<input type=\"color\" title=\"Background Color\" value=\"#ffda00\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#bbbbbb\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container mb-5\" mbr-if=\"showTitle||showSubtitle\">\n\t\t<div class=\"media-container-row\">\n\t\t\t<div class=\"col-12 align-center\">\n\t\t\t\t<h2 class=\"mbr-section-title mbr-semibold pb-3 mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">\n\t\t\t\t\tOur <b>Happy </b>Clients\n\t\t\t\t</h2>\n\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubtitle\">\n\t\t\t\t\tClick any image to change it.Click blue \"Gear\" icon in the top right corner to change background,\n\t\t\t\t\tamount slides and amount visible items at once.\n\t\t\t\t</h3>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"carousel slide\" role=\"listbox\" data-pause=\"true\" data-keyboard=\"false\" data-ride=\"{{showAutoplay ? 'carousel' : 'false'}}\" data-interval=\"{{showAutoplay ? interval : 'false'}}\">\n\t\t\t<div class=\"carousel-inner\" mbr-list mbr-list-grow=\"slidesCount\" data-visible=\"{{visibleSlides}}\">\n\t\t\t\t<div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/bri-480x260.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t<div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/mega-group-indonesia-1287x698.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div><div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/telkom-indonesia-1287x698.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div><div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/angkasa-pura-airport-1287x698.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div><div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/pln-1287x698.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div><div class=\"carousel-item \">\n\t\t\t\t\t<div class=\"media-container-row\">\n\t\t\t\t\t\t<div class=\"col-md-12\">\n\t\t\t\t\t\t\t<div class=\"wrap-img \">\n\t\t\t\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/usee-tv-1287x698.png\" class=\"img-responsive clients-img\" alt>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div></div>\n\t\t\t<div class=\"carousel-controls\">\n\t\t\t\t<a data-app-prevent-settings class=\"carousel-control carousel-control-prev\" role=\"button\" data-slide=\"prev\">\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"mbri-left mbr-iconfont\"></span>\n\t\t\t\t\t<span class=\"sr-only\">Previous</span>\n\t\t\t\t</a>\n\t\t\t\t<a data-app-prevent-settings class=\"carousel-control carousel-control-next\" role=\"button\" data-slide=\"next\">\n\t\t\t\t\t<span aria-hidden=\"true\" class=\"mbri-right mbr-iconfont\"></span>\n\t\t\t\t\t<span class=\"sr-only\">Next</span>\n\t\t\t\t</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".carousel-control": {
+              "background": "#000"
+            },
+            ".carousel-item": {
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              ".media-container-row": {
+                "-webkit-flex-grow": "1",
+                "flex-grow": "1"
+              },
+              ".wrap-img": {
+                "text-align": "center",
+                "img": {
+                  "max-height": "150px",
+                  "width": "auto",
+                  "max-width": "100%"
+                }
+              }
+            },
+            ".carousel-controls": {
+              "display": "flex",
+              "-webkit-justify-content": "center",
+              "justify-content": "center",
+              ".carousel-control": {
+                "background": "#000",
+                "border-radius": "50%",
+                "position": "static",
+                "width": "40px",
+                "height": "40px",
+                "margin-top": "2rem",
+                "border-width": "1px",
+                "&.carousel-control-prev": {
+                  "left": "auto",
+                  "margin-right": "20px",
+                  "margin-left": "0"
+                },
+                "&.carousel-control-next": {
+                  "right": "auto",
+                  "margin-right": "0"
+                },
+                ".mbr-iconfont": {
+                  "font-size": "1rem"
+                }
+              }
+            },
+            ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5": {
+              "display": "none"
+            },
+            ".col-lg-15": {
+              "-webkit-box-flex": "0",
+              "-ms-flex": "0 0 100%",
+              "-webkit-flex": "0 0 100%",
+              "flex": "0 0 100%",
+              "max-width": "100%",
+              "position": "relative",
+              "min-height": "1px",
+              "padding-right": "10px",
+              "padding-left": "10px",
+              "width": "100%"
+            },
+            "@media (min-width: 992px)": {
+              ".col-lg-15": {
+                "-ms-flex": "0 0 20%",
+                "-webkit-flex": "0 0 20%",
+                "flex": "0 0 20%",
+                "max-width": "20%",
+                "width": "20%"
+              },
+              ".carousel-inner": {
+                "&.slides2": {
+                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(50%, 0, 0)",
+                    "transform": "translate3d(50%, 0, 0)"
+                  },
+                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(-50%, 0, 0)",
+                    "transform": "translate3d(-50%, 0, 0)"
+                  },
+                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(0, 0, 0)",
+                    "transform": "translate3d(0, 0, 0)"
+                  },
+                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
+                    "display": "block"
+                  }
+                },
+                "&.slides3": {
+                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(33.333333%, 0, 0)",
+                    "transform": "translate3d(33.333333%, 0, 0)"
+                  },
+                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(-33.333333%, 0, 0)",
+                    "transform": "translate3d(-33.333333%, 0, 0)"
+                  },
+                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(0, 0, 0)",
+                    "transform": "translate3d(0, 0, 0)"
+                  },
+                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
+                    "display": "block"
+                  }
+                },
+                "&.slides4": {
+                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(25%, 0, 0)",
+                    "transform": "translate3d(25%, 0, 0)"
+                  },
+                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(-25%, 0, 0)",
+                    "transform": "translate3d(-25%, 0, 0)"
+                  },
+                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(0, 0, 0)",
+                    "transform": "translate3d(0, 0, 0)"
+                  },
+                  ".cloneditem-1, .cloneditem-2, .cloneditem-3": {
+                    "display": "block"
+                  }
+                },
+                "&.slides5": {
+                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(20%, 0, 0)",
+                    "transform": "translate3d(20%, 0, 0)"
+                  },
+                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(-20%, 0, 0)",
+                    "transform": "translate3d(-20%, 0, 0)"
+                  },
+                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(0, 0, 0)",
+                    "transform": "translate3d(0, 0, 0)"
+                  },
+                  ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4": {
+                    "display": "block"
+                  }
+                },
+                "&.slides6": {
+                  "> .carousel-item.active.carousel-item-right, > .carousel-item.carousel-item-next": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(16.666667%, 0, 0)",
+                    "transform": "translate3d(16.666667%, 0, 0)"
+                  },
+                  "> .carousel-item.active.carousel-item-left, > .carousel-item.carousel-item-prev": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(-16.666667%, 0, 0)",
+                    "transform": "translate3d(-16.666667%, 0, 0)"
+                  },
+                  "> .carousel-item.carousel-item-left, > .carousel-item.carousel-item-prev.carousel-item-right, > .carousel-item.active": {
+                    "left": "0",
+                    "-webkit-transform": "translate3d(0, 0, 0)",
+                    "transform": "translate3d(0, 0, 0)"
+                  },
+                  ".cloneditem-1, .cloneditem-2, .cloneditem-3, .cloneditem-4, .cloneditem-5": {
+                    "display": "block"
+                  }
+                }
+              }
+            },
+            "H2": {
+              "color": "#353535"
+            }
+          },
+          "_cid": "ssGYOE8C7J",
+          "_anchor": "clients-17",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "features9",
+          "_customHTML": "<section class=\"firmm4_features9 carousel slide testimonials-slider\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\" plugins=\"BootstrapCarouselSwipe,mbr-testimonials-slider\" data-interval=\"false\">\n\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"checkbox\" name=\"fullWidth\" title=\"Full Width\">\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\" inline>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Card Title\" name=\"showCardTitle\">\n        <input type=\"checkbox\" title=\"Description\" name=\"showDesk\">\n        <header>Slides</header>\n        <input type=\"range\" inline title=\"Items\" name=\"testimonialsSlides\" min=\"1\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"showAutoplay\" checked>\n        <input type=\"range\" inline title=\"Interval\" name=\"interval\" min=\"1\" max=\"4\" step=\"1\" value=\"4\" condition=\"showAutoplay\">\n        <input type=\"color\" title=\"Indicators\" name=\"colorCircle\" value=\"#ffb18a\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/firmm4/components/_images/background/background.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n\n    <div class=\"text-center\" mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n        <div class=\"title_block\" mbr-if=\"showTitle || showSubtitle\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style align-center\" mbr-theme-style=\"display-2\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\">\n                    Galeri <span style=\"font-weight: normal;\">Kami</span></h4>\n                <h3 class=\"mbr-section-title mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n                    Follow Instagram <a href=\"https://www.instagram.com/turkigoliburan.id/\" class=\"text-primary\" target=\"_blank\"><b>@turkigoliburan.id&nbsp;</b></a></h3>\n            </div>\n\n        <div class=\"carousel slide\" role=\"listbox\" data-pause=\"true\" data-keyboard=\"false\" data-ride=\"{{showAutoplay ? 'carousel' : 'false'}}\" data-interval=\"{{showAutoplay ? interval*1000 : 'false'}}\">\n            <div mbr-list mbr-list-grow=\"testimonialsSlides\" class=\"carousel-inner\">\n                <div class=\"carousel-item\">\n                    <div class=\"row justify-content-center\">\n                        <div class=\"col-lg-4 col-md-4 col-sm-10 col-10 user\">\n                            <div class=\"user_image\">\n                                <img src=\"@PROJECT_PATH@/assets/images/test-3-670x560.png\" alt>\n                            </div>\n                            <h5 class=\"card_title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showCardTitle\" data-app-selector=\".card_title\"><b><a href=\"index.html\" class=\"text-secondary\">Design</a></b></h5>\n                            <p class=\"user_descr mbr-fonts-style\" mbr-if=\"showDesk\" mbr-theme-style=\"display-4\" data-app-selector=\".user_descr\">Design, Branding</p>\n                        </div>\n\n                        <div class=\"col-lg-4 col-md-4 col-sm-10 col-10 user\">\n                            <div class=\"user_image\">\n                                <img src=\"@PROJECT_PATH@/assets/images/test-670x560.png\" alt>\n                            </div>\n                            <h5 class=\"card_title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showCardTitle\" data-app-selector=\".card_title\"><b><a href=\"index.html\" class=\"text-secondary\">Promotion</a></b></h5>\n                            <p class=\"user_descr mbr-fonts-style\" mbr-if=\"showDesk\" mbr-theme-style=\"display-4\" data-app-selector=\".user_descr\">Advertising, Agency</p>\n                        </div>\n\n                        <div class=\"col-lg-4 col-md-4 col-sm-10 col-10 user\">\n                            <div class=\"user_image\">\n                                <img src=\"@PROJECT_PATH@/assets/images/test-2-670x560.png\" alt>\n                            </div>\n                            <h5 class=\"card_title mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showCardTitle\" data-app-selector=\".card_title\"><b><a href=\"index.html\" class=\"text-secondary\">Optimization</a></b></h5>\n                            <p class=\"user_descr mbr-fonts-style\" mbr-if=\"showDesk\" mbr-theme-style=\"display-4\" data-app-selector=\".user_descr\">Innovative, Branding</p>\n                        </div>\n                    </div>\n                    \n                </div>\n                \n                \n                \n            </div>\n            <ol class=\"carousel-indicators\" mbr-if=\"testimonialsSlides > 1\">\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" mbr-if=\"testimonialsSlides > 0\" class=\"active\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\" mbr-if=\"testimonialsSlides > 1\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\" mbr-if=\"testimonialsSlides > 2\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"3\" mbr-if=\"testimonialsSlides > 3\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"4\" mbr-if=\"testimonialsSlides > 4\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"5\" mbr-if=\"testimonialsSlides > 5\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"6\" mbr-if=\"testimonialsSlides > 6\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"7\" mbr-if=\"testimonialsSlides > 7\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"8\" mbr-if=\"testimonialsSlides > 8\"></li>\n                <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"9\" mbr-if=\"testimonialsSlides > 9\"></li>\n\n            </ol>\n<!--             <div class=\"carousel-controls\">\n                    <a class=\"carousel-control-prev\" role=\"button\" data-slide=\"prev\">\n                        <span aria-hidden=\"true\" class=\"mobi-mbri-left mobi-mbri mbr-iconfont\"></span>\n                        <span class=\"sr-only\">Previous</span>\n                    </a>\n\n                    <a class=\"carousel-control-next\" role=\"button\" data-slide=\"next\">\n                        <span aria-hidden=\"true\" class=\"mobi-mbri-right mobi-mbri mbr-iconfont\"></span>\n                        <span class=\"sr-only\">Next</span>\n                    </a>\n                </div> -->\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".carousel-item": {
+              "justify-content": "center"
+            },
+            ".carousel-item.active, .carousel-item-next, .carousel-item-prev": {
+              "display": "flex"
+            },
+            ".title_block": {
+              "margin-bottom": "80px"
+            },
+            ".mbr-section-subtitle": {
+              "margin-bottom": "16px",
+              "color": "#000000",
+              "letter-spacing": "1.6px",
+              "line-height": "1",
+              "font-weight": "600"
+            },
+            ".mbr-section-title": {
+              "color": "#353535"
+            },
+            ".card_title": {
+              "margin-bottom": "10px",
+              "transition": "0.6s cubic-bezier(0.215, 0.61, 0.355, 1)",
+              "&:hover": {}
+            },
+            ".user_descr": {
+              "margin": "0"
+            },
+            ".user": {
+              "&:hover": {
+                "img": {
+                  "transform": "scale(1.1)"
+                },
+                ".card_title a": {
+                  "color": "@primaryColor !important"
+                }
+              }
+            },
+            ".user_image": {
+              "margin-bottom": "25px",
+              "overflow": "hidden",
+              "img": {
+                "width": "100%",
+                "object-fit": "cover",
+                "transition": "0.6s cubic-bezier(0.215, 0.61, 0.355, 1)"
+              }
+            },
+            "li": {
+              "opacity": "1",
+              "border": "none",
+              "width": "15px",
+              "height": "2px",
+              "margin": "0 5px",
+              "max-width": "30px",
+              "max-height": "2px",
+              "background": "fade(@colorCircle, 30)",
+              "transition": "0.6s cubic-bezier(0.165, 0.84, 0.44, 1)"
+            },
+            "li.active": {
+              "opacity": "1",
+              "background-color": "@colorCircle",
+              "width": "27px",
+              "height": "2px"
+            },
+            ".carousel-indicators": {
+              "align-items": "center",
+              "position": "static",
+              "margin": "60px 0 0"
+            },
+            ".carousel-indicators li": {
+              "border-radius": "0"
+            },
+            "@media (max-width: 991px)": {
+              ".title_block": {
+                "margin-bottom": "40px"
+              },
+              ".carousel-indicators": {
+                "margin-top": "30px"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".user": {
+                "margin-top": "40px",
+                "&:first-child": {
+                  "margin-top": "0"
+                }
+              }
+            }
+          },
+          "_cid": "ssCj42ysXR",
+          "_anchor": "features9-t",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_name": "map02",
+          "_customHTML": "<section group=\"Map\" class=\"map02 levelm4_map02\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"5\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Sub Title\" name=\"showsubTitle\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Mail\" name=\"showButtons\">\n        <input type=\"map\" title=\"Map\" name=\"googleMap\" place-id=\"<iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.963509753871!2d106.97375471475078!3d-6.268529563111668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dbc0a705d77%3A0x88a9f67ef770c025!2sRuko%20Rose%20Garden%201!5e0!3m2!1sid!2sid!4v1616694246068!5m2!1sid!2sid&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;></iframe>\" value=\"<iframe src=&quot;https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.963509753871!2d106.97375471475078!3d-6.268529563111668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dbc0a705d77%3A0x88a9f67ef770c025!2sRuko%20Rose%20Garden%201!5e0!3m2!1sid!2sid!4v1616694246068!5m2!1sid!2sid&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;></iframe>\">\n        <select title=\"Col 1 Items\" name=\"items1\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n        </select>\n        <select title=\"Col 2 Items\" name=\"items2\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\">5</option>\n        </select>\n        <select title=\"Col 3 Items\" name=\"items3\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n            <option value=\"5\">5</option>\n        </select>\n\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@ADDONS_PATH@/levelm4/components/_images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"mbr-black col-md-12 md-pb col-lg-5 align-left\">\n                <h4 class=\"mbr-section-subtitle mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showsubTitle\">ABOUT US\n                </h4>\n                <h3 class=\"mbr-section-title mbr-bold mbr-black pb-4 mbr-fonts-style\" data-app-selector=\".mbr-section-title, .col\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\">Tertarik&nbsp; <span style=\"font-weight: normal;\">&amp;\n                    </span><div><span style=\"font-weight: normal;\">Penasaran</span></div>\n                </h3>\n                <p class=\"mbr-text text mbr-black mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .col\"><b>Kunjungi alamat kami&nbsp;</b><br><br>Pelanggan wajib membuat janji terlebih dahulu sebelum berkunjung ke kantor, karena budaya perusahaan kami bersifat digital corporate, semua staff ditempatkan lebih banyak di lapangan (sales call atau sedang bertugas sebagai tour leader)</p>\n            </div>\n            <div class=\"mbr-black col-md-12 col-lg-7 align-left\">\n\n                <div class=\"google-map\" mbr-map=\"googleMap\"> </div>\n\n                <div class=\"row\">\n                    <div class=\"col-md-4 md-pb col-lg-4\">\n                        <h2 class=\"title mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">\n                            Location</h2>\n                        <div class=\"align-wrap\" mbr-if=\"items1 > 0\">\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">PT Wisatapreneur Daring Indonesia <br></p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items1 > 1\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Ruko Rose Garden blok RRGB No.26 Lt.2, Grand Galaxy City, Kota Bekasi</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items1 > 2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Services</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items1 > 3\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Pricing</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items1 > 4\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Help</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-4 md-pb col-lg-4\">\n                        <h2 class=\"title mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">Contact Us</h2>\n                        <div class=\"align-wrap\" mbr-if=\"items2 > 0\">\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">\n                                        0882 7913 5000<br></p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items2 > 1\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">turkigoliburan@gmail.com</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items2 > 2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Content Composing</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items2 > 3\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Design &amp; Development</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items2 > 4\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Creative Direction</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n\n                    <div class=\"col-md-4 md-pb col-lg-4\">\n                        <h2 class=\"title mbr-bold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-5\" data-app-selector=\".title\">\n                            Our Hours</h2>\n                        <div class=\"align-wrap\" mbr-if=\"items3 > 0\">\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\"><b>Monday - Friday</b></p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items3 > 1\">\n                                    <p mbr-text class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">10:00 - 19:00</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items3 > 2\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\"><b>Saturday - Sunday</b></p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items3 > 3\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">by Appointment</p>\n                                </div>\n                            </div>\n                            <div class=\"item-wrap\">\n                                <div class=\"icons-wrap pb-2\" mbr-if=\"items3 > 4\">\n                                    <p class=\"icon-title mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".icon-title, .align-wrap\">Prompt Strategies</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            ".icon-title": {
+              "margin": "0",
+              "padding": "0"
+            },
+            "@media (min-width: 1400px)": {
+              ".text": {
+                "max-width": "360px"
+              }
+            },
+            "@media (max-width: 992px)": {
+              ".md-pb": {
+                "margin-bottom": "2rem"
+              }
+            },
+            ".google-map": {
+              "height": "18rem",
+              "position": "relative",
+              "margin-bottom": "2rem",
+              "iframe": {
+                "height": "100%",
+                "width": "100%"
+              },
+              "[data-state-details]": {
+                "color": "#6b6763",
+                "font-family": "Montserrat",
+                "height": "1.5em",
+                "margin-top": "-0.75em",
+                "padding-left": "1.25rem",
+                "padding-right": "1.25rem",
+                "position": "absolute",
+                "text-align": "center",
+                "top": "50%",
+                "width": "100%"
+              },
+              "&[data-state]": {
+                "background": "#e9e5dc"
+              },
+              "&[data-state=\"loading\"]": {
+                "[data-state-details]": {
+                  "display": "none"
+                },
+                "&::after": {}
+              }
+            },
+            ".mail": {
+              "position": "relative",
+              "cursor": "pointer",
+              "letter-spacing": "1px",
+              "width": "fit-content",
+              "display": "inline-block",
+              "&:after": {
+                "content": "\"\"",
+                "position": "absolute",
+                "height": "1px",
+                "width": "100%",
+                "background": "currentColor",
+                "bottom": "-6px",
+                "opacity": "0.1",
+                "left": "0"
+              },
+              "&:before": {
+                "content": "\"\"",
+                "position": "absolute",
+                "height": "1px",
+                "width": "0",
+                "transition": "all 0.4s ease-in-out",
+                "background": "currentColor",
+                "bottom": "-6px",
+                "left": "auto",
+                "right": "0"
+              },
+              "&:hover": {
+                "&:before": {
+                  "width": "100%",
+                  "right": "auto",
+                  "left": "0"
+                }
+              },
+              "color": "#5758e0",
+              "text-align": "right"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#999999"
+            },
+            ".icon-title, .align-wrap": {
+              "color": "#353535"
+            },
+            ".mbr-text, .col": {
+              "color": "#353535"
+            }
+          },
+          "_cid": "ssGIkEXzFF",
+          "_anchor": "map02-y",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value",
+              "& when (@gradientBg)": {
+                "background": "linear-gradient(0deg, @bg-value, @color2)"
+              }
+            },
+            "ul": {
+              "padding": "0",
+              "margin": "0",
+              "li": {
+                "list-style": "none",
+                "h4": {
+                  "margin": "0",
+                  "&.display-4": {
+                    "line-height": "1.75"
+                  }
+                }
+              }
+            },
+            ".item": {
+              "color": "#cacaca"
+            },
+            ".col-title": {
+              "color": "#ffffff",
+              "font-weight": "600"
+            },
+            ".fill-light-wrapper": {
+              "fill": "@fillColor",
+              "z-index": "2 !important",
+              "top": "0"
+            },
+            ".icons-wrapper ul": {
+              "margin": "0",
+              "padding": "0",
+              "li": {
+                "margin-right": "10px",
+                "margin-left": "10px",
+                "display": "inline-block",
+                ".mbr-iconfont": {
+                  "color": "@iconsColor",
+                  "font-size": "20px",
+                  "&:hover": {
+                    "color": "@iconsHoverColor"
+                  }
+                }
+              }
+            }
+          },
+          "_name": "footer04",
+          "_sourceTheme": "digitalm4",
+          "_customHTML": "<section group=\"Footer\" class=\"footer04 digitalm4_footer04\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"4\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"SVG\" name=\"showSvg\">\n        <input type=\"color\" title=\"SVG Fill Color\" name=\"fillColor\" value=\"#f9fafb\" condition=\"showSvg\">\n        <input type=\"range\" inline title=\"Col 1 Items\" name=\"menuItems1\" min=\"1\" max=\"10\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Col 3 Items\" name=\"menuItems3\" min=\"1\" max=\"10\" step=\"1\" value=\"1\">\n        <input type=\"checkbox\" title=\"Show Icons\" name=\"showIcons\" checked>\n        <input type=\"range\" inline title=\"Icons Count\" name=\"iconsCount\" min=\"1\" max=\"6\" step=\"1\" value=\"2\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Color\" name=\"iconsColor\" value=\"#ffffff\" condition=\"showIcons\">\n        <input type=\"color\" title=\"Icons Hover Color\" name=\"iconsHoverColor\" value=\"#878787\" condition=\"showIcons\">\n        <input type=\"checkbox\" title=\"Gradient\" name=\"gradientBg\" condition=\"bg.type=='color'\">\n        <input type=\"color\" title=\"Color 2\" name=\"color2\" value=\"#611750\" condition=\"gradientBg&&bg.type == 'color'\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" parallax>\n            <input type=\"color\" title=\"Background Color\" value=\"#1e2228\" selected>\n            <input type=\"video\" title=\"Background Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"fill-light-wrapper position-absolute mbr-z-index20\" preserveAspectRatio=\"none\" viewBox=\"0 0 1070 52\" mbr-if=\"showSvg\">\n        <path d=\"M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z\"></path>\n    </svg>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"row align-center mbr-white\">\n\n            <div class=\"col-12 col-md-4 mb-md-0 mb-5\">\n                <h3 class=\"col-title mbr-semibold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".col-title\">Legalitas</h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems1\">\n                    <li class=\"item-wrap align-center\">\n                        <h4 mbr-text class=\"item mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item\"><b>Tanda Daftar Usaha Pariwisata\n</b><div>556.11/186/DPMPTSP.PPJU</div></h4>\n                    </li>\n                    \n                    \n                    \n                    \n                <li class=\"item-wrap align-center\">\n                        <h4 mbr-text class=\"item mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item\"><b>Tanda Daftar Perusahaan\n</b><div>102617906055/0L</div></h4>\n                    </li></ul>\n\n            </div>\n\n            <div class=\"col-12 col-md-4 mb-md-0 mb-5\">\n\n                <h3 class=\"col-title mbr-semibold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".col-title, .icons-wrapper\">Sosial Media</h3>\n                <div class=\"icons-wrapper\" mbr-if=\"showIcons\">\n                    <ul>\n                        <li>\n                            <a class=\"icon-transition\" href=\"https://www.instagram.com/turkigoliburan.id/\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n                            </a>\n                        </li>\n                        <li mbr-if=\"iconsCount > 1\">\n                            <a class=\"icon-transition\" href=\"https://www.youtube.com/channel/UCRXgsY9RTY75Z1mjYbsZJ4Q\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-youtube socicon\"></span>\n                            </a>\n                        </li>\n                        <li mbr-if=\"iconsCount > 2\">\n                            <a class=\"icon-transition\" href=\"https://wisatapreneur.com/\" target=\"_blank\">\n                                <span mbr-icon class=\"mbr-iconfont li_world\"></span>\n                            </a>\n                        </li>\n                        <li mbr-if=\"iconsCount > 3\">\n                            <a class=\"icon-transition\" href=\"#\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-instagram socicon\"></span>\n                            </a>\n                        </li>\n                        <li mbr-if=\"iconsCount > 4\">\n                            <a class=\"icon-transition\" href=\"#\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-behance socicon\"></span>\n                            </a>\n                        </li>\n                        <li mbr-if=\"iconsCount > 5\">\n                            <a class=\"icon-transition\" href=\"#\">\n                                <span mbr-icon class=\"mbr-iconfont socicon-github socicon\"></span>\n                            </a>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n\n\n            <div class=\"col-12 col-md-4\">\n\n                <h3 class=\"col-title mbr-semibold pb-2 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".col-title\"></h3>\n                <ul class=\"list\" mbr-list mbr-list-grow=\"menuItems3\">\n                    <li class=\"item-wrap\">\n                        <h4 mbr-text class=\"item mbr-regular mbr-fonts-style\" mbr-theme-style=\"display-4\" data-app-selector=\".item\">Copyright 2021. All Rights Reserved</h4>\n                    </li>\n                    \n                    \n                    \n                    \n                    \n                </ul>\n\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "ssC5WiW2no",
+          "_anchor": "footer04-n",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
